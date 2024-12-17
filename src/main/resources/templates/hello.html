@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!--<html lang="en" xmlns:th="https://www.thymeleaf.org/">Old way to use thymeleaf-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello Page</title>
+
+<!--    <link rel="stylesheet" href="../static/css/style.css"> BAD WAY To LINK-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<h1>This is a Hello Page of Springboot MVC</h1>
+
+<h3 class="time">Time on server is: <span th:text="${serverDate}"></span></h3>
+<h3 class="time">Time on server is: <th:block th:text="${serverDate}"></th:block></h3>
+
+
+</body>
+</html>
