@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student List</h1>
+
+    <table>
+        <tr>
+
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Prime</th>
+            <th>Status</th>
+        </tr>
+        <tr th:each="tempStudent:${students}">
+            <td th:text="${tempStudent.rollno}"></td>
+            <td th:text="${tempStudent.name}"></td>
+            <td th:text="${tempStudent.gender}"></td>
+            <td th:text="${tempStudent.prime}"></td>
+            <!-- <td th:text="${tempStudent.prime}? '10% Discount' : 'Not Prime'"></td> -->
+            <td>
+                <span th:if="${tempStudent.prime == true}">10 % Discount</span>
+                <!-- <span th:if="${tempStudent.prime == false}">10 % Discount</span> -->
+                <span th:unless="${tempStudent.prime == true}">Not Prime</span>
+
+            </td>
+
+        </tr>
+    </table>
+
+
+</body>
+
+</html>
