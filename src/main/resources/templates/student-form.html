@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Info</title>
+</head>
+
+<body>
+    <h1>Save Student</h1>
+
+    <form th:action="@{/save}" th:object="${student}" method="post">
+
+        <input type="text" th:field="*{rollno}" placeholder="Enter rollno">
+        <br><br>
+        <input type="text" th:field="*{name}" placeholder="Enter Name">
+        <br><br>
+        <label for="">Gender</label>
+        <input type="radio" id="male" value="Male" th:field="*{gender}"> <label for="male">Male</label>
+        <input type="radio" id="female" value="Female" th:field="*{gender}"> <label for="female">Female</label>
+        <input type="radio" id="other" value="Other" th:field="*{gender}"> <label for="other">Other</label>
+        <br><br>
+
+        <input type="submit" value="Save">
+
+    </form>
+</body>
+
+</html>
