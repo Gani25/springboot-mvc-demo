@@ -1,5 +1,7 @@
 package com.sprk.springboot_mvc_demo.model;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -19,6 +21,8 @@ public class Student {
 
     private String gender;
 
-    private boolean prime;
+    private String country;
+
+    private List<String> skills;
 
 }

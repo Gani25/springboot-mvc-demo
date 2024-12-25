@@ -21,6 +21,23 @@
         <input type="radio" id="female" value="Female" th:field="*{gender}"> <label for="female">Female</label>
         <input type="radio" id="other" value="Other" th:field="*{gender}"> <label for="other">Other</label>
         <br><br>
+        <!-- Country -->
+        <label for="country">Country</label>
+        <select id="country" th:field="*{country}">
+
+            <option th:each="tempCountry : ${countries}" th:value="${tempCountry}" th:text="${tempCountry}">
+            </option>
+        </select>
+        <br><br>
+
+        <label>Skills</label>
+        <input type="checkbox" th:each="tempSkill:${allSkills}" th:field="*{skills}" th:text="${tempSkill}"
+            th:value="${tempSkill}">
+
+        <input type="checkbox" th:field="*{skills}" id="swift" th:value="SWIFT">
+        <label for="swift">SWIFT</label>
+
+        <br><br>
 
         <input type="submit" value="Save">
 

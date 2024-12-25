@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
+
 <body>
 
-<h1>This is a Home Page of Springboot MVC</h1>
+    <h1>Student is confirmed..</h1>
+    <h3>Name: <span th:text="${student.name}"></span></h3>
+    <p>Roll No: <th:block th:text="${student.rollno}"></th:block>
+    <p>Gender: <th:block th:text="${student.gender}"></th:block>
+    <p>COuntry: <th:block th:text="${student.country}"></th:block>
+    </p>
+    <p>COuntry: <th:block th:text="${student.skills}"></th:block>
+    </p>
 
 </body>
+
 </html>
